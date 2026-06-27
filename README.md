@@ -26,3 +26,6 @@ Para ejecutar este proyecto en tu máquina local, asegúrate de tener [Docker](h
    ```bash
    git clone https://github.com/tu-usuario/TrabajofinalSO-grupo-6.git
    cd TrabajofinalSO-grupo-6/techzone-project
+# Link del github
+https://github.com/jussepe06/TrabajofinalSO-grupo-6
+
