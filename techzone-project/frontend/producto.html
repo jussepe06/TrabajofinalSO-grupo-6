@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Producto - TechZone Perú</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+
+<body>
+    <div class="aurora-bg"></div>
+
+    <header>
+        <div class="brand" onclick="window.location.href='index.html'" style="cursor:pointer;">
+            <span class="material-icons-round">bolt</span>
+            TechZone <span>Perú</span>
+        </div>
+
+        <div class="header-actions">
+            <button class="btn-outline" onclick="window.location.href='index.html'">
+                Volver al catálogo
+            </button>
+        </div>
+    </header>
+
+    <main class="container product-detail-page">
+        <section id="product-detail-container"></section>
+
+        <section class="product-social-section glass-card">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Opiniones del producto</h2>
+                    <p style="color:var(--text-dim)">
+                        Próximamente conectado con MongoDB y Node.js para comentarios, likes y reacciones.
+                    </p>
+                </div>
+            </div>
+
+            <div id="rating-summary" class="rating-summary">
+                <div class="rating-main">
+                    <h3>0.0</h3>
+                    <p>☆☆☆☆☆</p>
+                    <span>0 opiniones</span>
+                </div>
+
+                <div class="rating-bars">
+                    <div id="rating-bars-content"></div>
+                </div>
+            </div>
+            
+            <div class="social-preview">
+
+                <div class="social-actions">
+                    <button onclick="cargarComentarios()">
+                        🔄 Actualizar comentarios
+                    </button>
+                </div>
+
+                <div class="comment-form">
+                    <div class="rating-input">
+                            <span>Tu valoración:</span>
+
+                            <select id="comentario-rating">
+                                <option value="5">★★★★★ 5</option>
+                                <option value="4">★★★★☆ 4</option>
+                                <option value="3">★★★☆☆ 3</option>
+                                <option value="2">★★☆☆☆ 2</option>
+                                <option value="1">★☆☆☆☆ 1</option>
+                            </select>
+                        </div>
+                    <textarea
+                        id="nuevo-comentario"
+                        placeholder="Escribe tu opinión sobre este producto..."
+                    ></textarea>
+
+                    <button
+                        class="btn-primary"
+                        onclick="publicarComentario()">
+                        Publicar comentario
+                    </button>
+                </div>
+
+                <div id="comentarios-container">
+                    <p style="color:var(--text-dim)">
+                        Cargando comentarios...
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        
+        <section class="related-section glass-card">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">También te puede interesar</h2>
+                    <p style="color:var(--text-dim)">
+                        Productos relacionados según la categoría
+                    </p>
+                </div>
+            </div>
+
+            <div id="related-products" class="related-products"></div>
+        </section>
+    </main>
+
+    <script src="producto.js"></script>
+</body>
+</html>
